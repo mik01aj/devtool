@@ -177,11 +177,11 @@ In some ways, `devtool` is a spiritual successor to `hihat`. The architecture is
 
 ### `iron-node`
 
-Another Electron-based debugger is [iron-node](https://github.com/s-a/iron-node). `iron-node` includes better support for native addons and a complex graphical interface that shows your `package.json` and `README.md`.
+[iron-node](https://github.com/s-a/iron-node) is another Electron-based debugger. `iron-node` includes better support for native addons and a complex graphical interface that shows your `package.json` and `README.md`.
 
-Whereas `devtool` is more focused on the command-line, Unix-style piping/redirection, and Electron/Browser APIs for interesting use-cases (e.g. [Google StreetView](#browser-apis)).
+`iron-node` shims various features to behave more like Node.js (like `require.main` and `process.exit`) and overrides the internal `require` mechanism for source maps, improved error handling and `"browser"` field resolution. 
 
-`devtool` shims various features to behave more like Node.js (like `require.main` and `process.exit`) and overrides the internal `require` mechanism for source maps, improved error handling and `"browser"` field resolution. 
+`devtool`, on the other hand, is more focused on the command-line, Unix-style piping/redirection, and Electron/Browser APIs for interesting use-cases (e.g. [Google StreetView](#browser-apis)).
 
 ### `node-inspector`
 
@@ -191,7 +191,7 @@ This means your code will run in a true Node environment, without any `window` o
 
 However, since it re-implements much of the debugging experience, it may feel clunky and fragile compared to developing inside the latest Chrome DevTools (e.g. `console.profile()` does not exist).
 
-Whereas `devtool` aims to make the experience feel more familiar to those coming from Chrome DevTools, and also promotes other features like Browser/Electron APIs.
+`devtool` aims to make the experience feel more familiar to those coming from Chrome DevTools, and also promotes other features like Browser/Electron APIs.
 
 ## License
 
